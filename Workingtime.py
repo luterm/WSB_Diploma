@@ -20,7 +20,7 @@ print("Working time:", user_hours, "hours and", user_min, "minutes.")
 quit()
 
 
-# basic version
+# basic version erwww
 user_hours = (1)
 user_min = (80)
 
