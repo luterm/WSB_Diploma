@@ -1,6 +1,4 @@
-
-# 2nd version
-user_hours = (input("Enter hours:"))
+1user_hours = (input("Enter hours:"))
 user_min = (input("Enter minutes:"))
 
 print(type(user_hours))
@@ -20,7 +18,7 @@ print("Working time:", user_hours, "hours and", user_min, "minutes.")
 quit()
 
 
-# basic version erwww
+# basic version
 user_hours = (1)
 user_min = (80)
 
