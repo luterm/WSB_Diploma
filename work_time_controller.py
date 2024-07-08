@@ -25,7 +25,7 @@ def summarize_time(hours, minutes):
     total_hours = hours + minutes // 60
     total_minutes = minutes % 60
     return total_hours, total_minutes
-
+2
 def add_to_table(worker_name, hours, minutes):
     if worker_name in time_summary_table:
         current_hours, current_minutes = time_summary_table[worker_name]
