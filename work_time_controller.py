@@ -11,7 +11,7 @@ import sys
 # Initialize a table to store time summaries
 time_summary_table = {}
 
-#check how to save worker's name and surname to a separate table columns
+#check how to save worker's name and surname to a separate table columns2
 def get_time_input():
     worker_name = input("Enter worker's name: ")
     try:
