@@ -38,22 +38,26 @@ def display_table():
     print("Time Summary Table:")
     for worker, time in time_summary_table.items():
         print(f"{worker}: {time[0]} hours, {time[1]} minutes")
+    print("Table displayed successfully.")  # Confirmation message
 
 def main():
     while True:
         print("\nOptions: 1 - Add time, 2 - Display table, 3 - Exit")
         choice = input("Choose an option: ")
         if choice == '1':
-            worker_name, hours, minutes = get_time_input()  # Get user input
+            worker_name, hours, minutes = get_time_input()
             if worker_name is not None:
                 add_to_table(worker_name, hours, minutes)
+                print(f"Time added for {worker_name}.")  # Confirmation message
+            else:
+                print("No worker name provided. Please try again.")  # Error feedback
         elif choice == '2':
             display_table()
         elif choice == '3':
             print("Exiting...")
             sys.exit()
         else:
-            print("Invalid option. Please choose again.")
+            print("Invalid option. Please choose again.")  # Error feedback
 
 if __name__ == "__main__":
     main()
