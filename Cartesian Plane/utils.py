@@ -34,6 +34,7 @@ print(cartesian_step(note, 'whole', 'down'))# Output: (2, 2)
 
 
 def musical_intervals(start_note, steps, notes):
+    
     """
     Calculate the sequence of notes based on the given steps.
     
@@ -41,21 +42,24 @@ def musical_intervals(start_note, steps, notes):
     start_note (tuple): The starting note coordinates (x, y).
     steps (list): A list of tuples where each tuple contains the step type and direction.
                   Example: [('half', 'up'), ('whole', 'down')]
+    notes (list): A list of note names corresponding to the Cartesian coordinates.
     
     Returns:
-    list: A list of note coordinates (x, y) after applying the steps.
+    list: A list of note names after applying the steps.
     """
+
+
     current_note = start_note
-    result = [current_note]
+    result = [notes[current_note[0] % len(notes)]]
     
     for step_type, direction in steps:
         current_note = cartesian_step(current_note, step_type, direction)
-        result.append(current_note)
+        result.append(notes[current_note[0] % len(notes)])
     
     return result
 
 # Example usage
 start_note = (3, 4)
 steps = [('half', 'up'), ('whole', 'down'), ('half', 'up')]
-notes = []
-print(musical_intervals(start_note, steps, notes))  # Output: [(3, 4), (4, 5), (3, 3), (4, 4)]
+notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B']  # Example note set
+print(musical_intervals(start_note, steps, notes))  # Output: ['F', 'G', 'E', 'F']
