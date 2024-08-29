@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../Work_Time_Controller"
+		},
+		{
+			"path": "../../WSB Diploma local"
+		},
+		{
+			"path": "../../Selenium Java"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"github.gitProtocol": "ssh"
+	}
+}
